@@ -24,6 +24,6 @@ Vous devrez fournir un repository github avec votre travail. Et précisé (dans 
 Le lien du repository devra être envoyé à l'adresse avaast1@eductive-lille.fr au plus tard à 13h.
 
 ## Restriction et notations
-L'utilisation d'IA générative (chatGPT, github copilot, ...) pour réaliser le code sera sanctionnée par un 0.
+L'utilisation d'IA générative (chatGPT, github copilot, ...) pour réaliser le code sera sanctionnée par un 0 pour le groupe complet.
 
 Bien que le travail soit en groupe, les notes sont individuelles, ainsi, deux étudiants d'un même groupe pourront avoir des notes très différentes selon le travail qu'ils auront fournis.
