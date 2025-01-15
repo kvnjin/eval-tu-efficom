@@ -27,3 +27,9 @@ Le lien du repository devra être envoyé à l'adresse avaast1@eductive-lille.fr
 L'utilisation d'IA générative (chatGPT, github copilot, ...) pour réaliser le code sera sanctionnée par un 0 pour le groupe complet.
 
 Bien que le travail soit en groupe, les notes sont individuelles, ainsi, deux étudiants d'un même groupe pourront avoir des notes très différentes selon le travail qu'ils auront fournis.
+
+## Assistance technique
+L'évaluateur ne répondra à aucune question.
+Par contre, chaque groupe disposera d'une assistance d'une durée de 15 minutes maximum (en une seule fois), pour poser des questions et/ou demander de l'aide sur une difficulté technique.
+Pour demander l'assistance, veuillez remplir le formulaire suivant : https://forms.gle/6D7J1jh7E4YTMs2f8
+L'évaluateur viendra vers vous dès qu'il est disponible.
