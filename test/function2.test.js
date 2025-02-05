@@ -35,4 +35,25 @@ describe('Calculate total price of a cart, with tax added', () => {
     test("Test each prices are non-negative number", () => {
         expect(calculateTotalPrice([5, 10], 0.2)).toBe(18)
     });
+
+    describe('Process purchase of cart after calculating total price and notificate it in the console', () => {
+        test("Send a notification after calculating total price of purchase",() =>{
+            console.log = jest.fn();
+            const cart = [5, 10];
+            const taxRate = 0.2;
+            const totalPrice = calculateTotalPrice(cart, taxRate);
+            processPurchase(cart, taxRate);
+
+            expect(console.log).toHaveBeenCalledWith(`Notification envoyée : Votre total est de ${totalPrice.toFixed(2)} €`);
+        });
+    });
 })
+
+test("Send a notification in the console", () => {
+    console.log = jest.fn();
+    const message = "Hello world";
+    
+    sendNotification(message);
+
+    expect(console.log).toHaveBeenCalledWith(`Notification envoyée : ${message}`);
+});
