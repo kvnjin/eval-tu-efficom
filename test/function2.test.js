@@ -73,28 +73,28 @@ describe('Generate a random password based on length and complexity required', (
     test("Test length is superior or equal to 6",() =>{
         expect(generatePassword(8, { uppercase: true, numbers: true, specialChars: true }).length).toBe(8)
     });
-    test("Test with uppercase, numbers and special characters",() =>{
+    test("Test length is superior or equal to 6 and with uppercase, numbers and special characters",() =>{
         expect(generatePassword(6, { uppercase: true, numbers: true, specialChars: true }).match(/[A-Z]/,/[0-9]/,/[^A-Za-z0-9]/))
     });
-    test("Test without uppercase, numbers and special characters",() =>{
+    test("Test length is superior or equal to 6 and without uppercase, numbers and special characters",() =>{
         expect(generatePassword(6, { uppercase: false, numbers: false, specialChars: false })).not.toMatch(/[A-Z]/,/[0-9]/,/[^A-Za-z0-9]/)
     });
-    test("Test without uppercase",() =>{
+    test("Test length is superior or equal to 6 and without uppercase",() =>{
         expect(generatePassword(6, { uppercase: false, numbers: true, specialChars: true })).not.toMatch(/[A-Z]/)
     });
-    test("Test without numbers",() =>{
+    test("Test length is superior or equal to 6 and without numbers",() =>{
         expect(generatePassword(6, { uppercase: true, numbers: false, specialChars: true })).not.toMatch(/[0-9]/)
     });
-    test("Test without special characters",() =>{
+    test("Test length is superior or equal to 6 and without special characters",() =>{
         expect(generatePassword(6, { uppercase: true, numbers: true, specialChars: false })).not.toMatch(/[^A-Za-z0-9]/)
     });
-    test("Test without uppercase, numbers",() =>{
+    test("Test length is superior or equal to 6 and without uppercase, numbers",() =>{
         expect(generatePassword(6, { uppercase: false, numbers: false, specialChars: true })).not.toMatch(/[A-Z]/,/[0-9]/)
     });
-    test("Test without uppercase, special characters",() =>{
+    test("Test length is superior or equal to 6 and without uppercase, special characters",() =>{
         expect(generatePassword(6, { uppercase: false, numbers: true, specialChars: false })).not.toMatch(/[A-Z]/,/[^A-Za-z0-9]/)
     });
-    test("Test without numbers, special characters",() =>{
+    test("Test length is superior or equal to 6 and without numbers, special characters",() =>{
         expect(generatePassword(6, { uppercase: true, numbers: false, specialChars: false })).not.toMatch(/[0-9]/,/[^A-Za-z0-9]/)
     });
 });
