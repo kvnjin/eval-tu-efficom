@@ -1,5 +1,8 @@
 const { isEven, calculateTotalPrice, processPurchase, sendNotification, generatePassword } = require("./../src/function.js");
 
-test("",() =>{
 
-});
+describe('Is this number even ?', () => {
+    test("Test number with a string",() =>{
+        expect(() => isEven('5')).toThrowError("Input must be a number")
+    });
+})
