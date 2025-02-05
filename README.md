@@ -33,3 +33,11 @@ L'évaluateur ne répondra à aucune question.
 Par contre, chaque groupe disposera d'une assistance d'une durée de 15 minutes maximum (en une seule fois), pour poser des questions et/ou demander de l'aide sur une difficulté technique.
 Pour demander l'assistance, veuillez remplir le formulaire suivant : https://forms.gle/6D7J1jh7E4YTMs2f8
 L'évaluateur viendra vers vous dès qu'il est disponible.
+
+
+## Livrable
+
+Livrable du groupe 6 
+
+Nicolas Chlebowski @NicoChlebo
+Kevin Jin @kvnjin
