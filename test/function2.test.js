@@ -49,11 +49,52 @@ describe('Calculate total price of a cart, with tax added', () => {
     });
 })
 
-test("Send a notification in the console", () => {
-    console.log = jest.fn();
-    const message = "Hello world";
-    
-    sendNotification(message);
+describe('Send a notification in the console', () => {
+    test("Send a notification in the console", () => {
+        console.log = jest.fn();
+        const message = "Hello world";
+        
+        sendNotification(message);
 
-    expect(console.log).toHaveBeenCalledWith(`Notification envoyée : ${message}`);
+        expect(console.log).toHaveBeenCalledWith(`Notification envoyée : ${message}`);
+    });
+});
+
+describe('Generate a random password based on length and complexity required', () => {
+    test("Test length is not a number",() =>{
+        expect(() => generatePassword('6', { uppercase: true, numbers: true, specialChars: true })).toThrowError("Length must be a number")
+    });
+    test("Test length is a number",() =>{
+        expect(generatePassword(6, { uppercase: true, numbers: true, specialChars: true }).length).toBe(6)
+    });
+    test("Test length is less than 6",() =>{
+        expect(() => generatePassword(5, { uppercase: true, numbers: true, specialChars: true })).toThrowError("Length must be a number greater than or equal to 6")
+    });
+    test("Test length is superior or equal to 6",() =>{
+        expect(generatePassword(8, { uppercase: true, numbers: true, specialChars: true }).length).toBe(8)
+    });
+    test("Test length is superior or equal to 6 and with uppercase, numbers and special characters",() =>{
+        expect(generatePassword(6, { uppercase: true, numbers: true, specialChars: true }).match(/[A-Z]/,/[0-9]/,/[^A-Za-z0-9]/))
+    });
+    test("Test length is superior or equal to 6 and without uppercase, numbers and special characters",() =>{
+        expect(generatePassword(6, { uppercase: false, numbers: false, specialChars: false })).not.toMatch(/[A-Z]/,/[0-9]/,/[^A-Za-z0-9]/)
+    });
+    test("Test length is superior or equal to 6 and without uppercase",() =>{
+        expect(generatePassword(6, { uppercase: false, numbers: true, specialChars: true })).not.toMatch(/[A-Z]/)
+    });
+    test("Test length is superior or equal to 6 and without numbers",() =>{
+        expect(generatePassword(6, { uppercase: true, numbers: false, specialChars: true })).not.toMatch(/[0-9]/)
+    });
+    test("Test length is superior or equal to 6 and without special characters",() =>{
+        expect(generatePassword(6, { uppercase: true, numbers: true, specialChars: false })).not.toMatch(/[^A-Za-z0-9]/)
+    });
+    test("Test length is superior or equal to 6 and without uppercase, numbers",() =>{
+        expect(generatePassword(6, { uppercase: false, numbers: false, specialChars: true })).not.toMatch(/[A-Z]/,/[0-9]/)
+    });
+    test("Test length is superior or equal to 6 and without uppercase, special characters",() =>{
+        expect(generatePassword(6, { uppercase: false, numbers: true, specialChars: false })).not.toMatch(/[A-Z]/,/[^A-Za-z0-9]/)
+    });
+    test("Test length is superior or equal to 6 and without numbers, special characters",() =>{
+        expect(generatePassword(6, { uppercase: true, numbers: false, specialChars: false })).not.toMatch(/[0-9]/,/[^A-Za-z0-9]/)
+    });
 });
