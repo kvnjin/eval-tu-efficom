@@ -11,4 +11,17 @@ describe('Is this number even ?', () => {
     test("Test number is even", () => {
         expect(isEven(4)).toBe(true)
     })
-})
+});
+
+test("Send a notification in the console", () => {
+    console.log = jest.fn();
+    const message = "Hello world";
+    
+    sendNotification(message);
+
+    expect(console.log).toHaveBeenCalledWith(`Notification envoyée : ${message}`);
+});
+
+
+
+
